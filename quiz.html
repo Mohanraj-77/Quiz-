@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div id="con">
+    <div id="head">
+      <h2>Rules for the quiz :</h2>
+        <ul>
+        
+        <li>Attend all the questions to get your score</li>
+        <li>All The Best</li> 
+        </ul>
+       <label for="email">Enter your Email :</label> <br>
+       <input type="text" placeholder="mo@gmail.com" required> <br>
+       <br>
+       <label for="phone number">Enter your phonenumber :</label> <br>
+       <input type="text" placeholder="1234567890" required> <br>
+       <br>
+       <label for="gender">Select your Gender</label> <br>
+       <input type="radio" name="gender">
+       <label for="gender">Male</label> <br>
+       <input type="radio" name="gender" id="">
+       <label for="gender">Female</label> <br>
+    
+  </div>
+    
+    <div id="one">
+        <p> 1. National game for United states ?</p>
+        <input type="radio"  name="National game" value="Cricket" required>
+        <label for="National game" >Cricket</label><br>
+        <input type="radio"  name="National game"  value="Base ball" id="correct1"  required>
+        <label for="National game">Base ball</label><br>
+        <input type="radio" name="National game" value="Soccer" required>
+        <label for="National game" >Soccer</label><br>
+    </div>
+    <div>
+        <p> 2. Christ The Redeemer is located in ?</p>
+        <input type="radio"  name="location" required>
+        <label for="location">Cusco Region, Peru</label> <br>
+        <input type="radio"  name="location">
+        <label for="location">Yucatan, Mexico</label><br>
+        <input type="radio"  name="location" id="correct2" required>
+        <label for="location">Rio de Janeiro</label><br>
+
+    </div>
+    <div>
+        <p> 3. Largest state in india ?</p>
+        <input type="radio"  name="state" id="correct3"required>
+        <label for="state">Rajasthan </label><br>
+        <input type="radio"  name="state">
+        <label for="state">Gujarat</label><br>
+        <input type="radio"  name="state" required>
+        <label for="state">Madhya Pradesh</label><br>
+
+    </div>
+    <div>
+        <p> 4. National aquatic animal of india?</p>
+        <input type="radio"  name="animal" required>
+        <label for="animal">Ganges Shark</label><br>
+        <input type="radio"  name="animal" id="correct4">
+        <label for="animal">Ganges River Dolphin</label><br>
+        <input type="radio"  name="animal" required>
+        <label for="animal">Indus river Dolphin</label><br>
+    </div>
+    <div>
+        <p> 5. The book titled “1283” illustrates the career of which Football legend?</p>
+        <input type="radio"  name="career" id="correct5"required>
+        <label for="career">Pele</label><br>
+        <input type="radio"  name="career">
+        <label for="career">Diego Maradona</label><br>
+        <input type="radio"  name="career" required>
+        <label for="carrer">Zidane</label><br>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button id="btn" onclick="Score()">Get Score</button>
+    </div>
+    <br>
+    <br>
+    <div id="result">
+
+    </div>
+</div>
+ <script>
+     function Score()
+     {
+        var score = 0;
+      if (document.getElementById("correct1").checked)
+      {
+        score++;
+      }
+      if (document.getElementById("correct2").checked)
+      {
+        score++;
+      }
+      if (document.getElementById("correct3").checked)
+      {
+        score++;
+      }
+      if (document.getElementById("correct4").checked)
+      {
+        score++;
+      }
+      if (document.getElementById("correct5").checked)
+      {
+        score++;
+      }
+
+      let result = document.getElementById("result")
+      result.innerHTML=("Your score is  " + score )
+     }
+   
+ </script>
+</body>
+</html>
